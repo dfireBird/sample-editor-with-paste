@@ -5,6 +5,7 @@ import { Preview } from '@/components/preview'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Content } from '@/types'
+import { ModeToggle } from './components/mode-toggle'
 
 import './App.css'
 
@@ -16,7 +17,10 @@ function App() {
 
   return (
     <ThemeProvider defaultTheme='dark'>
-      <div className='mx-auto w-full'>
+      <div className='mx-auto flex w-full flex-col'>
+        <div className='mb-10 w-fit self-end'>
+          <ModeToggle />
+        </div>
         <Tabs defaultValue='editor' className=''>
           <TabsList className='p grid w-full grid-cols-2'>
             <TabsTrigger value='editor'>Editor</TabsTrigger>
