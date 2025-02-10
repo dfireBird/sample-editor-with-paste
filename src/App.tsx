@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import { Editor } from '@/components/editor'
+import { Preview } from '@/components/preview'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Content } from '@/types'
@@ -24,7 +25,9 @@ function App() {
           <TabsContent value='editor'>
             <Editor content={content} setContent={setContent} />
           </TabsContent>
-          <TabsContent value='preview'>Put Preview Content here</TabsContent>
+          <TabsContent value='preview'>
+            <Preview content={content} />
+          </TabsContent>
         </Tabs>
       </div>
     </ThemeProvider>
