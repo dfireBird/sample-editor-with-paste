@@ -53,4 +53,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          cname: editor.dfirebird.dev
           publish_dir: ./dist
